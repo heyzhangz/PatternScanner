@@ -1,7 +1,7 @@
 # PatternScanner
 
 ### 适配
-扫描指令修改==PatternScan.Tasks.ScanSameIDTask==文件, 目前只适配了两种指令格式, 如果本地测试没有扫描到的话, 可以单步调试适配一下对应的指令格式.
+扫描指令修改`PatternScan.Tasks.ScanSameIDTask`文件, 目前只适配了两种指令格式, 如果本地测试没有扫描到的话, 可以单步调试适配一下对应的指令格式.
 
 ### 使用
 
