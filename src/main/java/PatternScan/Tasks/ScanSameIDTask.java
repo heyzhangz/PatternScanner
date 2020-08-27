@@ -14,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-public class ScanSameDeidTask extends Scan {
+public class ScanSameIDTask extends Scan {
 
     public String[] SP_PATTERN_LIST = {"35",
         "Landroid/os/Build;->BOARD", "Landroid/os/Build;->BRAND",
@@ -25,12 +25,7 @@ public class ScanSameDeidTask extends Scan {
         "Landroid/os/Build;->TAGS", "Landroid/os/Build;->TYPE",
         "Landroid/os/Build;->USER"};
 
-    public String[] OPEN_UDID_REFLEC_LIST = {
-            "org.OpenUDID.OpenUDID_manager",
-            "getOpenUDID"
-    };
-
-    public ScanSameDeidTask (String apkPath, String resDirPath) {
+    public ScanSameIDTask (String apkPath, String resDirPath) {
         super(apkPath, resDirPath);
     }
 
@@ -217,7 +212,7 @@ public class ScanSameDeidTask extends Scan {
 //        String apk = "D:\\Download\\countly.dex";
         String out = ".\\";
 
-        ScanSameDeidTask task = new ScanSameDeidTask(apk, out);
+        ScanSameIDTask task = new ScanSameIDTask(apk, out);
         task.scan(apk);
 
     }
