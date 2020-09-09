@@ -7,6 +7,14 @@ import java.util.*;
 import java.util.concurrent.Callable;
 
 public class Scan implements Callable {
+
+    public static String[] WHITE_CLASS_LIST = {
+            "Landroid/",
+            "Landroidx/",
+            "Ljava/",
+            "Ljavax/"
+    };
+
     public String apkFilePath;
     public String reslutJsonDir;
 
@@ -18,6 +26,26 @@ public class Scan implements Callable {
     public Scan() {
     }
 
+    public static boolean isSkipPackage(String clzName, String[] extendList) {
+
+        if(isSkipPackage(clzName))
+            return true;
+
+        for(String e : extendList)
+            if(clzName.startsWith(e))
+                return true;
+
+        return false;
+    }
+
+    public static boolean isSkipPackage(String clzName) {
+
+        for(String e : WHITE_CLASS_LIST)
+            if(clzName.startsWith(e))
+                return true;
+
+        return false;
+    }
 
     public static void main(String[] args) {
         String demoApk = "/Users/blackmax/Desktop/GMS/pay/ticketsmaster.apk";

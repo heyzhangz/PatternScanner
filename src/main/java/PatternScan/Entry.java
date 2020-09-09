@@ -32,7 +32,8 @@ public class Entry {
 //            Pattern1 task = new Pattern1(apk, reslutJsonDir);
 //            AdDetect task = new AdDetect(apk, reslutJsonDir);
 //            ScanMeasureTask task = new ScanMeasureTask(apk, reslutJsonDir);
-            ScanSameIDTask task = new ScanSameIDTask(apk, reslutJsonDir);
+//            ScanSameIDTask task = new ScanSameIDTask(apk, reslutJsonDir);
+            ScanImportTask task = new ScanImportTask(apk, reslutJsonDir);
 
             try {
                 fixedThreadPool.submit(task);
